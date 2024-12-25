@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambreen Hotel</title>
+    <!-- Memasukkan Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4b2e2b;
+            color: #fdfdfd;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            background-color: #73594b;
+        }
+
+        nav .navbar-brand {
+            color: #ffffff !important;
+        }
+
+        nav .navbar-toggler {
+            border-color: #ffffff;
+        }
+
+        nav .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff !important;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
+            font-size: 1.5em;
+        }
+
+        nav ul li:hover > a {
+            color: #ffdb7d;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #4b2e2b !important; /* Warna latar belakang dropdown */
+            min-width: 200px;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            color: #ffdb7d !important; /* Warna teks item dropdown */
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #73594b; /* Warna latar belakang saat item dropdown dihover */
+            color: #ffffff; /* Warna teks saat hover */
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 20px;
+            background-color: #f5f5f0;
+        }
+
+        aside {
+            width: 20%;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        aside iframe {
+            width: 100%;
+            height: 210px;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .gallery img {
+            width: calc(100% - 15px);
+            height: 210px;
+            margin: 0 5px;
+        }
+
+        footer {
+            background-color: #4b2e2b;
+            color: #fdfdfd;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AMBREEN'S HOTEL</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light"> <!-- Menggunakan kelas Bootstrap untuk navbar -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ambreen Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kamar.html">Kamar</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fasilitas</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="petualangan_alam.html">Petualangan Alam</a></li>
+                            <li>
+                                <a class="dropdown-item" href="kolam_renang.html">Kolam Renang</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="sumber_air_panas.html">Sumber Air Panas</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="kolam_renang_anak.html">Kolam Renang Anak & Dewasa</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="reguler.html">Reguler</a></li>
+                                            <li><a class="dropdown-item" href="premium.html">Premium</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="pusat_kebugaran.html">Pusat Kebugaran</a></li>
+                            <li><a class="dropdown-item" href="ruang_rapat.html">Ruang Rapat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="pesan.html">Pesan Sekarang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <aside>
+            <iframe src="https://www.youtube.com/embed/VtN9GrBlbzE?si=IkVqo6fw5ymXNvU6" title="Hotel 1" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/4bg5u2UHRsQ?si=J1CO8ybNs0dwMkdl" title="Hotel 2" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/7sQ2EEBT3-s?si=kVtLmBCZYK2dodfX" title="Hotel 3" allowfullscreen></iframe>
+        </aside>
+
+        <div class="gallery">
+            <img src="img/gambar1.jpeg" alt="Photo 1">
+            <img src="img/gambar2.webp" alt="Photo 2">
+            <img src="img/gambar3.jpg" alt="Photo 3">
+            <img src="img/gambar4.jpg" alt="Photo 4">
+            <img src="img/gambar5.jpeg" alt="Photo 5">
+            <img src="img/gambar6.jpeg" alt="Photo 6">
+            <img src="img/gambar7.jpg" alt="Photo 7">
+            <img src="img/gambar8.jpeg" alt="Photo 8">
+            <img src="img/gambar9.jpg" alt="Photo 9">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ambreen's Hotel</p>
+    </footer>
+
+    <!-- Memasukkan Bootstrap JavaScript -->
+    <script src="js/bootstrap.bundle.js"></script> 
+</body>
+</html>
