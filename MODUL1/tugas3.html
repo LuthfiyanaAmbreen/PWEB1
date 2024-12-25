@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ambreen Hotel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li:hover > a {
+            color: #ddd;
+        }
+
+        /* Dropdown menu */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #555;
+            min-width: 200px;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            color: #fff;
+            padding: 10px 15px;
+            display: block;
+            text-align: left;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #666;
+        }
+
+        /* Nested submenu */
+        nav ul li ul li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #666;
+            min-width: 200px;
+        }
+
+        nav ul li ul li:hover > ul {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AMBREEN'S HOTEL</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="kamar.html">Kamar</a></li>
+            <li>
+                <a href="fasilitas.html">Fasilitas</a>
+                <ul>
+                    <li><a href="petualangan_alam.html">Petualangan Alam</a></li>
+                    <li>
+                        <a href="kolam_renang.html">Kolam Renang</a>
+                        <ul>
+                            <li><a href="sumber_air_panas.html">Sumber Air Panas</a></li>
+                            <li>
+                                <a href="kolam_renang_anak.html">Kolam Renang Anak & Dewasa</a>
+                                <ul>
+                                    <li><a href="reguler.html">Reguler</a></li>
+                                    <li><a href="premium.html">Premium</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="pusat_kebugaran.html">Pusat Kebugaran</a></li>
+                    <li><a href="ruang_rapat.html">Ruang Rapat</a></li>
+                </ul>
+            </li>
+            <li><a href="pesan.html">Pesan Sekarang</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <aside>
+            <iframe src="https://www.youtube.com/embed/XSILjvuJ5aQ?si=TgRaAU2jyp7mt09Q" title="Hotel 1"></iframe>
+            <iframe src="https://www.youtube.com/embed/6ONpeO4OA2o?si=ULYMYG8OsTWMcPrf" title="Hotel 2"></iframe>
+            <iframe src="https://www.youtube.com/embed/gmQXNX_1EFs?si=pSPuB6IC1Sq-5I4X" title="Hotel 3"></iframe>
+        </aside>
+
+        <main>
+            <iframe src="gambar/hotel1.jpg" title="Photo 1"></iframe>
+            <iframe src="gambar/hotel2.jpeg" title="Photo 2"></iframe>
+            <iframe src="gambar/hotel3.jpg" title="Photo 3"></iframe>
+            <iframe src="gambar/hotel13.jpeg" title="Photo 4"></iframe>
+            <iframe src="gambar/hotel10.jpg" title="Photo 5"></iframe>
+            <iframe src="gambar/hotel4.jpeg" title="Photo 6"></iframe>
+            <iframe src="gambar/hotel7.jpg" title="Photo 7"></iframe>
+            <iframe src="gambar/hotel8.jpg" title="Photo 8"></iframe>
+            <iframe src="gambar/hotel11.jpg" title="Photo 9"></iframe>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ambreen's Hotel</p>
+    </footer>
+</body>
+</html>
