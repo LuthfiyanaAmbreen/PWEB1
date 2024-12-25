@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Kamar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f3f3;
+        }
+        .form-container {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Tambah Data Kamar</h2>
+        <form>
+            <div class="form-group">
+                <label for="id-kamar">ID Kamar:</label>
+                <input type="text" id="id-kamar" name="id-kamar" placeholder="Masukkan ID Kamar">
+            </div>
+            <div class="form-group">
+                <label for="gambar-ruangan">Gambar Ruangan:</label>
+                <input type="file" id="gambar-ruangan" name="gambar-ruangan" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="jenis-kamar">Jenis Kamar:</label>
+                <select id="jenis-kamar" name="jenis-kamar">
+                    <option value="">--Pilih Salah Satu--</option>
+                    <option value="standar">Standar</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="family">Family</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="harga">Harga:</label>
+                <input type="text" id="harga" name="harga" placeholder="Masukkan Harga Kamar">
+            </div>
+            <div class="form-group">
+                <label for="fasilitas">Fasilitas:</label>
+                <textarea id="fasilitas" name="fasilitas" rows="4" 
+                placeholder="Masukkan Deskripsi Fasilitas"></textarea>
+            </div>
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; 
+            color: white; border: none; border-radius: 4px; cursor: pointer;">Simpan
+            </button>
+        </form>
+    </div>
+</body>
+</html>

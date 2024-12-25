@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Fasilitas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f3f3;
+        }
+        .form-container {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Tambah Data Fasilitas</h2>
+        <form>
+            <div class="form-group">
+                <label for="id-fasilitas">ID Fasilitas:</label>
+                <input type="text" id="id-fasilitas" name="id-fasilitas" placeholder="Masukkan ID Fasilitas">
+            </div>
+            <div class="form-group">
+                <label for="nama-fasilitas">Nama Fasilitas:</label>
+                <input type="text" id="nama-fasilitas" name="nama-fasilitas" placeholder="Masukkan Nama Fasilitas">
+            </div>
+            <div class="form-group">
+                <label for="fasilitas">Fasilitas:</label>
+                <textarea id="fasilitas" name="fasilitas" rows="3" placeholder="Deskripsi Fasilitas"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="harga-weekend">Harga Weekend:</label>
+                <input type="number" id="harga-weekend" name="harga-weekend" placeholder="Masukkan Harga Weekend">
+            </div>
+            <div class="form-group">
+                <label for="harga-weekday">Harga Weekday:</label>
+                <input type="number" id="harga-weekday" name="harga-weekday" placeholder="Masukkan Harga Weekday">
+            </div>
+            <div class="form-group">
+                <label for="kuota">Kuota:</label>
+                <input type="number" id="kuota" name="kuota" min="1" placeholder="Masukkan Kuota">
+            </div>
+            <div class="form-group">
+                <label for="jam-buka">Jam Buka:</label>
+                <input type="time" id="jam-buka" name="jam-buka">
+            </div>
+            <div class="form-group">
+                <label for="jam-tutup">Jam Tutup:</label>
+                <input type="time" id="jam-tutup" name="jam-tutup">
+            </div>
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; 
+            color: white; border: none; border-radius: 4px; cursor: pointer;">Simpan
+            </button>
+        </form>
+    </div>
+</body>
+</html>
