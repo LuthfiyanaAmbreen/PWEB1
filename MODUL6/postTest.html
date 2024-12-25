@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi DOM dengan jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #fakultas, #univ {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fakultas">FKOM</div>
+    <input type="text" id="univ" value="UNIKU">
+    <button id="updateBtn">Ubah Data</button>
+    
+    <script>
+        $(document).ready(function () {
+            // Ketika tombol diklik
+            $("#updateBtn").click(function () {
+                // Mengubah isi div dengan id 'fakultas'
+                $("#fakultas").text("Fakultas Ilmu Komputer");
+
+                // Mengubah value dari input text dengan id 'univ'
+                $("#univ").val("Universitas Kuningan");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan dan Menyembunyikan Gambar</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: left;
+        }
+        img {
+            max-width: 300px;
+            display: none; /* Default: gambar tersembunyi */
+            margin-top: 20px;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menampilkan dan Menyembunyikan Gambar</h1>
+    <div class="buttons">
+        <button id="showBtn">Tampilkan Gambar</button>
+        <button id="hideBtn">Sembunyikan Gambar</button>
+    </div>
+    <img id="image" src="img/foto.jpg" alt="Contoh Gambar">
+    
+    <script>
+        $(document).ready(function () {
+            // Event untuk menampilkan gambar
+            $("#showBtn").click(function () {
+                $("#image").show();
+            });
+
+            // Event untuk menyembunyikan gambar
+            $("#hideBtn").click(function () {
+                $("#image").hide();
+            });
+        });
+    </script>
+</body>
+</html>
