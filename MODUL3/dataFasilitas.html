@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Fasilitas</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="css/styleDF.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Tambah Data Fasilitas</h2>
+        <form>
+            <div class="form-group">
+                <label for="id-fasilitas">ID Fasilitas:</label>
+                <input type="text" id="id-fasilitas" name="id-fasilitas" placeholder="Masukkan ID Fasilitas">
+            </div>
+            <div class="form-group">
+                <label for="nama-fasilitas">Nama Fasilitas:</label>
+                <input type="text" id="nama-fasilitas" name="nama-fasilitas" placeholder="Masukkan Nama Fasilitas">
+            </div>
+            <div class="form-group">
+                <label for="fasilitas">Fasilitas:</label>
+                <textarea id="fasilitas" name="fasilitas" rows="3" placeholder="Deskripsi Fasilitas"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="harga-weekend">Harga Weekend:</label>
+                <input type="number" id="harga-weekend" name="harga-weekend" placeholder="Masukkan Harga Weekend">
+            </div>
+            <div class="form-group">
+                <label for="harga-weekday">Harga Weekday:</label>
+                <input type="number" id="harga-weekday" name="harga-weekday" placeholder="Masukkan Harga Weekday">
+            </div>
+            <div class="form-group">
+                <label for="kuota">Kuota:</label>
+                <input type="number" id="kuota" name="kuota" min="1" placeholder="Masukkan Kuota">
+            </div>
+            <div class="form-group">
+                <label for="jam-buka">Jam Buka:</label>
+                <input type="time" id="jam-buka" name="jam-buka">
+            </div>
+            <div class="form-group">
+                <label for="jam-tutup">Jam Tutup:</label>
+                <input type="time" id="jam-tutup" name="jam-tutup">
+            </div>
+            <button type="submit" class="submit-button">Simpan</button>
+        </form>
+    </div>
+</body>
+</html>
