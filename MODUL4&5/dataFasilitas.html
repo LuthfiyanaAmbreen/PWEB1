@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Fasilitas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .form-group input[type="time"] {
+            padding: 8px;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        .form-group input:invalid, 
+        .form-group textarea:invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Tambah Data Fasilitas</h2>
+        <form id="fasilitas-form" onsubmit="return tambahFasilitas(event)">
+            <div class="form-group">
+                <label for="id-fasilitas">ID Fasilitas:</label>
+                <input type="text" id="id-fasilitas" name="id-fasilitas" placeholder="Masukkan ID Fasilitas" required>
+            </div>
+            <div class="form-group">
+                <label for="nama-fasilitas">Nama Fasilitas:</label>
+                <input type="text" id="nama-fasilitas" name="nama-fasilitas" placeholder="Masukkan Nama Fasilitas" required>
+            </div>
+            <div class="form-group">
+                <label for="fasilitas">Fasilitas:</label>
+                <textarea id="fasilitas" name="fasilitas" rows="3" placeholder="Deskripsi Fasilitas" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="harga-weekend">Harga Weekend:</label>
+                <input type="number" id="harga-weekend" name="harga-weekend" placeholder="Masukkan Harga Weekend" required min="0">
+            </div>
+            <div class="form-group">
+                <label for="harga-weekday">Harga Weekday:</label>
+                <input type="number" id="harga-weekday" name="harga-weekday" placeholder="Masukkan Harga Weekday" required min="0">
+            </div>
+            <div class="form-group">
+                <label for="kuota">Kuota:</label>
+                <input type="number" id="kuota" name="kuota" placeholder="Masukkan Kuota" required min="1">
+            </div>
+            <div class="form-group">
+                <label for="jam-buka">Jam Buka:</label>
+                <input type="time" id="jam-buka" name="jam-buka" required>
+            </div>
+            <div class="form-group">
+                <label for="jam-tutup">Jam Tutup:</label>
+                <input type="time" id="jam-tutup" name="jam-tutup" required>
+            </div>
+            <button type="submit" class="submit-button">Simpan</button>
+        </form>
+    </div>
+
+    <script>
+        function tambahFasilitas(event) {
+            event.preventDefault(); // Mencegah form dari pengiriman otomatis
+
+            // Mengambil data dari form
+            const idFasilitas = document.getElementById('id-fasilitas').value;
+            const namaFasilitas = document.getElementById('nama-fasilitas').value;
+            const fasilitas = document.getElementById('fasilitas').value;
+            const hargaWeekend = document.getElementById('harga-weekend').value;
+            const hargaWeekday = document.getElementById('harga-weekday').value;
+            const kuota = document.getElementById('kuota').value;
+            const jamBuka = document.getElementById('jam-buka').value;
+            const jamTutup = document.getElementById('jam-tutup').value;
+
+            // Validasi input
+            if (!idFasilitas || !namaFasilitas || !fasilitas || !hargaWeekend || !hargaWeekday || !kuota || !jamBuka || !jamTutup) {
+                alert("Semua kolom harus diisi!");
+                return false;
+            }
+
+            // Menampilkan alert dengan data yang telah dimasukkan
+            alert("Data Fasilitas Telah Ditambahkan:\n" +
+                "ID Fasilitas: " + idFasilitas + "\n" +
+                "Nama Fasilitas: " + namaFasilitas + "\n" +
+                "Fasilitas: " + fasilitas + "\n" +
+                "Harga Weekend: " + hargaWeekend + "\n" +
+                "Harga Weekday: " + hargaWeekday + "\n" +
+                "Kuota: " + kuota + "\n" +
+                "Jam Buka: " + jamBuka + "\n" +
+                "Jam Tutup: " + jamTutup);
+            
+            // Reset form setelah data disubmit
+            document.getElementById('fasilitas-form').reset();
+        }
+    </script>
+</body>
+</html>
