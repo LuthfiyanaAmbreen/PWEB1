@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasilitas - Ambreen Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f0f0f0;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 0;
+            padding: 0.5rem 1rem;
+        }
+        .facility-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            height: 250px; /* Ukuran card lebih kecil dan kotak */
+        }
+
+        .facility-card:hover {
+            transform: scale(1.05); /* Membesar sedikit saat hover */
+        }
+
+        .facility-card img {
+            width: 100%;
+            height: 150px; /* Menyesuaikan gambar agar lebih kecil */
+            object-fit: cover;
+        }
+
+        .facility-card p {
+            display: block;
+            width: 100%;
+            text-align: justify;
+            font-size: 14px; /* Ukuran teks lebih kecil */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="konsumen_dashboard.html">Ambreen Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="konsumen_dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kamar.html">Kamar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="fasilitas.html">Fasilitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pesan.html">Pesan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger btn-sm text-white" href="login.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <!-- 3 card di atas -->
+            <div class="col-md-4 mb-4">
+                <div class="facility-card">
+                    <img src="img/kolam.jpg" alt="Kolam Renang">
+                    <div class="p-3">
+                        <h5>Kolam Renang</h5>
+                        <p>Kolam renang yang luas dan nyaman untuk tamu yang ingin bersantai atau berenang.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="facility-card">
+                    <img src="img/spa.jpg" alt="Spa & Wellness">
+                    <div class="p-3">
+                        <h5>Spa & Wellness</h5>
+                        <p>Fasilitas spa dan perawatan tubuh untuk relaksasi, termasuk pijat tradisional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="facility-card">
+                    <img src="img/gym.jpg" alt="Gym">
+                    <div class="p-3">
+                        <h5>Gym</h5>
+                        <p>Fasilitas kebugaran dengan peralatan modern, ideal untuk tamu yang ingin menjaga kebugaran.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- 3 card di bawah -->
+            <div class="col-md-4 mb-4">
+                <div class="facility-card">
+                    <img src="img/resto.jpg" alt="Restoran">
+                    <div class="p-3">
+                        <h5>Restoran</h5>
+                        <p>Restoran dengan berbagai pilihan menu lokal dan internasional untuk tamu kami.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="facility-card">
+                    <img src="img/meet.jpg" alt="Parkir">
+                    <div class="p-3">
+                        <h5>Ruang Meeting</h5>
+                        <p>Ruang pertemuan dengan fasilitas lengkap untuk acara bisnis atau rapat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="facility-card">
+                    <img src="img/parkir.jpg" alt="Business Center">
+                    <div class="p-3">
+                        <h5>Tempat Parkir</h5>
+                        <p>Area parkir yang luas dan aman untuk kendaraan tamu yang menginap.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
